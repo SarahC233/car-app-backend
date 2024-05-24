@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000;
 
 //New CORS configuration
 const allowedOrigins = [
-  "https://polite-meadow-01cc9c400.5.azurestaticapps.net/", //NEW FRONT END WEBSITE
+  "https://polite-meadow-01cc9c400.5.azurestaticapps.net", //NEW FRONT END WEBSITE
   "http://localhost:5173",
 ];
 
