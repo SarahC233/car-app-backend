@@ -104,3 +104,5 @@ app.post("/predict", upload.single("image"), async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+//comment to run deployment
