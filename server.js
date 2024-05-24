@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000;
 
 //New CORS configuration
 const allowedOrigins = [
-  "https://brave-bush-090488100.5.azurestaticapps.net",
+  "https://polite-meadow-01cc9c400.5.azurestaticapps.net/", //NEW FRONT END WEBSITE
   "http://localhost:5173",
 ];
 
@@ -48,7 +48,7 @@ const predictor = new PredictionAPIClient(
   predictionEndpoint
 );
 
-// Root route
+// Root route - fix for 'cannot GET /' error
 app.get("/", (req, res) => {
   res.send("Welcome to the Car Insurance Prediction API");
 });
