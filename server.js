@@ -13,7 +13,10 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 //New CORS configuration
-const allowedOrigins = ["https://your-frontend-url", "http://localhost:5173"];
+const allowedOrigins = [
+  "https://brave-bush-090488100.5.azurestaticapps.net",
+  "http://localhost:5173",
+];
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -44,6 +47,11 @@ const predictor = new PredictionAPIClient(
   predictorCredentials,
   predictionEndpoint
 );
+
+// Root route
+app.get("/", (req, res) => {
+  res.send("Welcome to the Car Insurance Prediction API");
+});
 
 //Health check endpoint
 app.get("/health", (req, res) => {
